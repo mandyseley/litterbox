@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the YayComic feature.
+ */
+
+include_once 'yaycomic.features.inc';
