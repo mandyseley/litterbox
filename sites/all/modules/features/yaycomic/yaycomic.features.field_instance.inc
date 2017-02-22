@@ -10,6 +10,59 @@
 function yaycomic_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-yaycomic-field_category'.
+  $field_instances['node-yaycomic-field_category'] = array(
+    'bundle' => 'yaycomic',
+    'default_value' => array(
+      0 => array(
+        'tid' => 5,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 7,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_category',
+    'label' => 'Category',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 9,
+    ),
+  );
+
   // Exported field_instance: 'node-yaycomic-field_creator_comments'.
   $field_instances['node-yaycomic-field_creator_comments'] = array(
     'bundle' => 'yaycomic',
@@ -246,6 +299,58 @@ function yaycomic_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-yaycomic-field_slug'.
+  $field_instances['node-yaycomic-field_slug'] = array(
+    'bundle' => 'yaycomic',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 8,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_slug',
+    'label' => 'URL Slug',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 10,
+    ),
+  );
+
   // Exported field_instance: 'node-yaycomic-field_tags'.
   $field_instances['node-yaycomic-field_tags'] = array(
     'bundle' => 'yaycomic',
@@ -404,6 +509,7 @@ function yaycomic_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Category');
   t('Comic Image');
   t('Creator Comments');
   t('Facebook Text');
@@ -413,6 +519,7 @@ function yaycomic_field_default_field_instances() {
   t('Text that will be used to share the comic on Twitter.');
   t('Transcript');
   t('Twitter Text');
+  t('URL Slug');
 
   return $field_instances;
 }
